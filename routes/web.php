@@ -25,4 +25,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/registro', 'HomeController@registro')->name('registro');
 
+// USER
+Route::get('/editarPerfil', 'HomeController@editarPerfil')->name('editarPerfil');
+Route::get('/verPostulacionesFondos', 'HomeController@verPostulacionesFondos')->name('verPostulacionesFondos');
+Route::get('/enviarCaso', 'HomeController@enviarCaso')->name('enviarCaso');
+
+Route::get('/seguimientoCasosUsu', 'HomeController@seguimientoCasosUsu')->name('seguimientoCasosUsu');
+
+// ADMIN
+Route::get('/usuariosRegistrados', 'HomeController@usuariosRegistrados')->name('usuariosRegistrados');
 Route::get('/fondosConcursables', 'HomeController@fondosConcursables')->name('fondosConcursables');
+Route::get('/seguimientoFondos', 'HomeController@seguimientoFondos')->name('seguimientoFondos');
+
+Route::get('/seguimientoCasosAdmin', 'HomeController@seguimientoCasosAdmin')->name('seguimientoCasosAdmin');

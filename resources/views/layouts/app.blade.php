@@ -18,13 +18,27 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap4.css') }}" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap4.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/3.0.1/js/dataTables.buttons.js
+"></script>
+    <script src="https://cdn.datatables.net/buttons/3.0.1/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.0.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.0.1/js/buttons.print.min.js"></script>
 </head>
 <body>
-
-
-
-
-
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -37,11 +51,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    
-
-
-    
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -64,7 +73,7 @@
                 <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FONDOS CONCURSABLES</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown08">
                   <a class="dropdown-item" href="#">POSTULAR FONDOS CONCURSABLES</a>
-                  <a class="dropdown-item" href="#">VER ESTADO POSTULACIONES</a>
+                  <a class="dropdown-item" href="{{ route('verPostulacionesFondos') }}">VER ESTADO POSTULACIONES</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -77,8 +86,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RECLAMOS/SUGERENCIAS</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown08">
-                  <a class="dropdown-item" href="#">INGRESAR CASO</a>
-                  <a class="dropdown-item" href="#">VER ESTADO DEL CASO </a>
+                  <a class="dropdown-item" href="{{ route('enviarCaso') }}">INGRESAR CASO</a>
+                  <a class="dropdown-item" href="{{ route('seguimientoCasosUsu') }}">VER ESTADO DEL CASO </a>
                 </div>
               </li>
             </ul>
@@ -91,7 +100,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USUARIOS</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown08">
-                  <a class="dropdown-item" href="#">VER TODOS</a>
+                  <a class="dropdown-item" href="{{ route('usuariosRegistrados') }}">VER TODOS</a>
                   <a class="dropdown-item" href="#">ASIGNAR INFLUENCIA, VECINDAD, AFINIDAD</a>
                 </div>
               </li>
@@ -99,7 +108,7 @@
                 <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FONDOS CONCURSABLES</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown08">
                   <a class="dropdown-item" href="#">CREAR FONDOS CONCURSABLE</a>
-                  <a class="dropdown-item" href="#">VER POSTULACIONES</a>
+                  <a class="dropdown-item" href="{{ route('verPostulacionesFondos') }}">VER POSTULACIONES</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -111,7 +120,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RECLAMOS Y SUGERENCIAS</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown08">
-                  <a class="dropdown-item" href="#">VER CASO</a>
+                  <a class="dropdown-item" href="{{ route('seguimientoCasosAdmin') }}">VER CASO</a>
                 </div>
               </li>
             </ul>
@@ -123,21 +132,21 @@
                   
 
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> HOLA 
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                           
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}">
+                                        {{ __('VER PERFIL') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('editarPerfil') }}">
+                                        {{ __('EDITAR PERFIL') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('CERRAR SESIÓN') }}
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}">
-                                        {{ __('VER PERFIL') }}
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}">
-                                        {{ __('EDITAR PERFIL') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -154,14 +163,15 @@
             @yield('content')
         </main>
     </div>
+
     <div class="container">
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
           <a href="#">VOLVER A MENU PRINCIPAL</a>
         </p>
-        <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+        <p>PARA MAYOR INFORMACIÓN, CONSULTA O DUDAS <b>+56991594961 / XXXXX@CENIZAS.CL</b></p>
+        <!-- <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p> -->
       </div>
     </footer>
 </div>

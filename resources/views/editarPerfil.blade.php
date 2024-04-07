@@ -15,7 +15,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('REGISTRO DATOS PERSONALES') }}</div>
+                <div class="card-header">{{ __('EDICIÓN DATOS PERSONALES') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -94,7 +94,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Registrar') }}
+                                    {{ __('Editar') }}
                                 </button>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('REGISTRO PERSONA JURIDÍCA') }}</div>
+                <div class="card-header">{{ __('EDICIÓN PERSONA JURIDÍCA') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -173,7 +173,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Registrar') }}
+                                    {{ __('Editar') }}
                                 </button>
                             </div>
                         </div>
@@ -190,7 +190,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('REGISTRO RELACIONES JURIDÍCAS') }}</div>
+                <div class="card-header">{{ __('EDICIÓN RELACIONES JURIDÍCAS') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -246,7 +246,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Registrar') }}
+                                    {{ __('Editar') }}
                                 </button>
                             </div>
                         </div>

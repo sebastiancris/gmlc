@@ -25,6 +25,47 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if(auth::user()->perfil==1)
+        {
+            return view('admin');
+        }
+        
+        if(auth::user()->perfil==0)
+        {
+            
+            return view('home');
+            return view('registro');
+        }
+    }
+
+    public function editarPerfil()
+    {
+        if(auth::user()->perfil==0)
+        {
+            return view('editarPerfil');
+        }
+        else
+        {
+            dd("sin acceso");
+        }
+    }
+
+    public function enviarCaso()
+    {
+        if(auth::user()->perfil==0)
+        {
+            return view('enviarCaso');
+        }
+        else
+        {
+            dd("sin acceso");
+        }
+    }
+
+    public function fondosConcursables()
+    {
+       
+
         // return view('home');
         if(auth::user()->perfil==1)
         {
@@ -35,13 +76,33 @@ class HomeController extends Controller
         {
             return view('registro');
         }
+
+        return view('fondosConcursables');
+
     }
 
-    public function fondosConcursables()
-    {
-       
+    public function seguimientoFondos()
+    { 
+        // if(auth::user()->perfil==1)
+        // {
+        //     return view('admin');     
+        // }
+        
+        if(auth::user()->perfil==1)
+        {
+            // //dd("no tiene permisos para acceder a esta ruta");   
+            // return redirect()->route('welcome')->with('error','The credentials do not match our records');
+
+             dd("sin acceso---->>>");
+
+            //return view('welcome');
+
+        }    
+
+
+
         //dd("okok");
-        return view('fondosConcursables');
+        return view('seguimientoFondos');
 
         // if(auth::user()->perfil==1)
         // {
@@ -54,4 +115,52 @@ class HomeController extends Controller
         // }
     }
 
+    public function usuariosRegistrados()
+    {
+        if(auth::user()->perfil==1)
+        {
+            return view('usuariosRegistrados');
+        }
+        else
+        {
+            dd("sin acceso");
+        }    
+    }
+
+    public function verPostulacionesFondos()
+    {
+        if(auth::user()->perfil==0)
+        {
+            return view('verPostulacionesFondos');
+        }
+        else
+        {
+            dd("sin acceso");
+        }    
+    }
+
+    public function seguimientoCasosUsu()
+    {
+        if(auth::user()->perfil==0)
+        {
+            return view('seguimientoCasosUsuario');
+        }
+        else
+        {
+            dd("sin acceso");
+        }    
+    }
+
+    public function seguimientoCasosAdmin()
+    {
+        if(auth::user()->perfil==1)
+        {
+            return view('seguimientoCasosAdmin');
+        }
+        else
+        {
+            dd("sin acceso");
+        }    
+    }
+    
 }
