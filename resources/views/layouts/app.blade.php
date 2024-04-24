@@ -23,6 +23,9 @@
 
     <link href="{{ asset('https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap4.css') }}" rel="stylesheet">
 
+    <link href="https://cdn.rawgit.com/westonganger/bootstrap-directional-buttons/master/dist/bootstrap-directional-buttons.css" rel="stylesheet" type="text/css" />
+
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
@@ -72,7 +75,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FONDOS CONCURSABLES</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown08">
-                  <a class="dropdown-item" href="#">POSTULAR FONDOS CONCURSABLES</a>
+                  <a class="dropdown-item" href="{{ route('postularFondos') }}">POSTULAR FONDOS CONCURSABLES</a>
                   <a class="dropdown-item" href="{{ route('verPostulacionesFondos') }}">VER ESTADO POSTULACIONES</a>
                 </div>
               </li>

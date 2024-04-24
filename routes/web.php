@@ -34,7 +34,7 @@ Route::get('/seguimientoCasosUsu', 'HomeController@seguimientoCasosUsu')->name('
 
 // ADMIN
 Route::get('/usuariosRegistrados', 'HomeController@usuariosRegistrados')->name('usuariosRegistrados');
-Route::get('/fondosConcursables', 'HomeController@fondosConcursables')->name('fondosConcursables');
+Route::get('/postularFondos', 'HomeController@postularFondos')->name('postularFondos');
 Route::get('/seguimientoFondos', 'HomeController@seguimientoFondos')->name('seguimientoFondos');
 
 Route::get('/seguimientoCasosAdmin', 'HomeController@seguimientoCasosAdmin')->name('seguimientoCasosAdmin');

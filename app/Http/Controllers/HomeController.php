@@ -62,23 +62,21 @@ class HomeController extends Controller
         }
     }
 
-    public function fondosConcursables()
+    public function postularFondos()
     {
-       
+        return view('postularFondos');       
 
         // return view('home');
-        if(auth::user()->perfil==1)
-        {
-            return view('admin');
-        }
+        // if(auth::user()->perfil==1)
+        // {
+        //     return view('admin');
+        // }
         
-        if(auth::user()->perfil==0)
-        {
-            return view('registro');
-        }
-
-        return view('fondosConcursables');
-
+        // if(auth::user()->perfil==0)
+        // {
+        //     //return view('registro');
+        // }
+        
     }
 
     public function seguimientoFondos()
