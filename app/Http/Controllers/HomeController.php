@@ -33,7 +33,7 @@ class HomeController extends Controller
         if(auth::user()->perfil==0)
         {
             
-            return view('home');
+            //return view('home');
             return view('registro');
         }
     }
@@ -77,6 +77,93 @@ class HomeController extends Controller
         //     //return view('registro');
         // }
         
+    }
+
+    public function postularProyectos()
+    {
+        return view('postularProyectos'); 
+
+        // return view('home');
+        // if(auth::user()->perfil==1)
+        // {
+        //     return view('admin');
+        // }
+        
+        // if(auth::user()->perfil==0)
+        // {
+        //     //return view('registro');
+        // }
+        
+    }
+
+    public function seguimientoProyectos()
+    { 
+        // if(auth::user()->perfil==1)
+        // {
+        //     return view('admin');
+        // }
+        
+        if(auth::user()->perfil==1)
+        {
+            // //dd("no tiene permisos para acceder a esta ruta");   
+            // return redirect()->route('welcome')->with('error','The credentials do not match our records');
+
+             dd("sin acceso---->>>");
+
+            //return view('welcome');
+
+        }    
+
+
+
+        //dd("okok");
+        return view('seguimientoProyectos');
+
+        // if(auth::user()->perfil==1)
+        // {
+        //     return view('admin');     
+        // }
+        
+        // if(auth::user()->perfil==0)
+        // {
+        //     return view('registro');     
+        // }
+    }
+
+    public function detalleProyecto()
+    {         
+        if(auth::user()->perfil==1)
+        {
+     
+             dd("sin acceso---->>>");
+
+        }
+
+        return view('detalleProyecto');
+    }
+
+    public function agradecimiento()
+    {         
+        if(auth::user()->perfil==1)
+        {
+     
+             dd("sin acceso---->>>");
+
+        }
+
+        return view('agradecimiento');
+    }
+
+    public function respuestaProyecto()
+    {         
+        if(auth::user()->perfil==1)
+        {
+     
+             dd("sin acceso---->>>");
+
+        }
+
+        return view('respuestaProyecto');
     }
 
     public function seguimientoFondos()

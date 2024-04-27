@@ -27,10 +27,17 @@ Route::get('/registro', 'HomeController@registro')->name('registro');
 
 // USER
 Route::get('/editarPerfil', 'HomeController@editarPerfil')->name('editarPerfil');
+
+Route::get('/postularProyectos', 'HomeController@postularProyectos')->name('postularProyectos');
+
+Route::get('/seguimientoProyectos', 'HomeController@seguimientoProyectos')->name('seguimientoProyectos');
 Route::get('/verPostulacionesFondos', 'HomeController@verPostulacionesFondos')->name('verPostulacionesFondos');
 Route::get('/enviarCaso', 'HomeController@enviarCaso')->name('enviarCaso');
-
 Route::get('/seguimientoCasosUsu', 'HomeController@seguimientoCasosUsu')->name('seguimientoCasosUsu');
+
+Route::get('/detalleProyecto', 'HomeController@detalleProyecto')->name('detalleProyecto');
+Route::get('/respuestaProyecto', 'HomeController@respuestaProyecto')->name('respuestaProyecto');
+Route::get('/agradecimiento', 'HomeController@agradecimiento')->name('agradecimiento');
 
 // ADMIN
 Route::get('/usuariosRegistrados', 'HomeController@usuariosRegistrados')->name('usuariosRegistrados');

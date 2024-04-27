@@ -2,11 +2,14 @@
 
 @section('content')
 <section class="jumbotron text-center">
+                                <h3>Registrarse para crear <br>una cuenta</h3>
+
     <div class="container">
         <div class="row justify-content-center">
+
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Register') }}</div>
+                    <div class="card-header">Registro datos personales</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">

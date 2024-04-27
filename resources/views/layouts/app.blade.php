@@ -82,8 +82,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">APOYO PROYECTOS</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown08">
-                  <a class="dropdown-item" href="#">POSTULAR PROYECTOS</a>
-                  <a class="dropdown-item" href="#">VER ESTADO POSTULACIONES</a>
+                  <a class="dropdown-item" href="{{ route('postularProyectos') }}">POSTULAR PROYECTOS</a>
+                  <a class="dropdown-item" href="{{ route('seguimientoProyectos') }}">VER ESTADO POSTULACIONES</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -140,8 +140,11 @@
                                 </a>
                           
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}">
-                                        {{ __('VER PERFIL') }}
+                                    <a class="dropdown-item" href="#">
+                                        {{ __('PERFIL PERSONAL') }}
+                                    </a>
+                                     <a class="dropdown-item" href="#">
+                                        {{ __('PERFIL PERSONA JURIDICA') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('editarPerfil') }}">
                                         {{ __('EDITAR PERFIL') }}

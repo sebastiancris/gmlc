@@ -22,8 +22,7 @@
             <thead>
                 <tr>
                     <th>N° CASO</th>
-                    <th>NOMBRE PROYECTO</th>
-                    <th>NOMBRE</th>
+                    <th>ASUNTO</th>
                     <th>FECHA DE ENVÍO</th>
                     <th>ESTADO</th>
                     <th>RESPUESTA</th>
@@ -33,7 +32,6 @@
                 <tr>
                     <td>20987</td>
                     <td>NOMBRE CASO XXXX</td>
-                    <td>JUAN PERÉZ</td>
                     <td>20/03/2024</td>
                     <td>ABIERTO</td>
                     <td><a href="">RESPONDER</a></td>
@@ -41,7 +39,6 @@
                 <tr>
                     <td>20985</td>
                     <td>NOMBRE CASO XXXX</td>
-                    <td>SEBASTÍAN VALENZUELA</td>
                     <td>20/03/2024</td>
                     <td>CERRADA</td>
                     <td><a href="">VER RESPUESTA</a></td>
@@ -49,23 +46,20 @@
                 <tr>
                     <td>20987</td>
                     <td>NOMBRE CASO XXXX</td>
-                    <td>JUAN PERÉZ</td>
                     <td>20/03/2024</td>
                     <td>ABIERTO</td>
-                    <td><a href="">RESPONDER</a></td>
+                    <td><a href="">EN ESPERA</a></td>
                 </tr>
                 <tr>
                     <td>20987</td>
                     <td>NOMBRE CASO XXXX</td>
-                    <td>JUAN PERÉZ</td>
                     <td>20/03/2024</td>
                     <td>ABIERTO</td>
-                    <td><a href="">RESPONDER</a></td>
+                    <td><a href="">EN ESPERA</a></td>
                 </tr>
                 <tr>
                     <td>20985</td>
                     <td>NOMBRE CASO XXXX</td>
-                    <td>SEBASTÍAN VALENZUELA</td>
                     <td>20/03/2024</td>
                     <td>CERRADA</td>
                     <td><a href="">VER RESPUESTA</a></td>
