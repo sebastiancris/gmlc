@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'GRUPO MINERO LAS CENIZAS') }}</title>
+    <title>{{ config('app.name', 'GRUPO MINERO LAS CENIZAS') }}..</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -75,7 +75,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FONDOS CONCURSABLES</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown08">
-                  <a class="dropdown-item" href="{{ route('postularFondos') }}">POSTULAR FONDOS CONCURSABLES</a>
+                  <a class="dropdown-item" href="{{ route('postularFondos') }}">POSTULAR FONDOS CONCURSABLES.</a>
                   <a class="dropdown-item" href="{{ route('verPostulacionesFondos') }}">VER ESTADO POSTULACIONES</a>
                 </div>
               </li>
